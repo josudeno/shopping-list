@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListsTable extends Migration
+class CreateProductsListsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,19 @@ class CreateListsTable extends Migration
     public function up()
     {
         Schema::create('lists', function (Blueprint $table) {
-            $table->increments('lid');
+            $table->increments('lid')->unsigned();
             $table->integer('uid_created')->unsigned();
-            $table->foreign('uid_created')->references('uid')->on('users');
-            $table->string('name');
+            $table->foreign('uid_created')->references('uid')->on('users')->onDelete('cascade');
+            $table->string('name')->notNullable();
             $table->timestamps();
         });
+        Schema::create('products', function (Blueprint $table) {
+            $table->integer('pid')->unsigned()->unique();
+            $table->string('name')->notNullable();
+            $table->string('api_name');
+            $table->timestamps();
+        });
+
     }
 
     /**
@@ -31,8 +38,8 @@ class CreateListsTable extends Migration
     {
         Schema::dropIfExists('lists', function(Blueprint $table) {
             $table->dropForeign('lists_uid_created_foreign');
-//            $table->dropIndex('lists_uid_created_index');
             $table->dropColumn('uid_created');
         });
+        Schema::dropIfExists('products');
     }
 }

@@ -164,6 +164,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
+         * HTML Service Providers...
+         */
+        Collective\Html\HtmlServiceProvider::class,
+
+        /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
@@ -226,6 +231,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

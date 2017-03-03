@@ -7,7 +7,7 @@
 <body>
 @section('header')
     <header id="banner" class="body">
-        <h1>Shopping list</h1>
+        <h1>Don't forget to buy...</h1>
         <nav>
             <ul>
                 <li><a href="#">current List</a></li>
@@ -23,7 +23,7 @@
     <aside id="featured" class="body">
         <article>
             <figure>
-                {{ HTML::image('img/cart.png', 'cart', ['class' => 'trolley']) }}
+                {{ Html::image('img/cart.png', 'cart', ['class' => 'trolley']) }}
             </figure>
             <hgroup>
 
@@ -45,12 +45,11 @@
         <span class="primary">
           <span class="role">Shopping cart</span>
         </span><!-- /.primary -->
-            {{ HTML::image('img/carts.png', 'cart', ['class' => 'photo']) }}
+            {{ Html::image('img/carts.png', 'cart', ['class' => 'photo']) }}
             <span class="bio">Where you can easily create shopping lists.</span>
 
         </address><!-- /#about -->
     </footer><!-- /#contentinfo -->
-
 @show
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
@@ -62,6 +61,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-{{ HTML::style('css/style.css'); }}
+<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
 </body>
 </html>

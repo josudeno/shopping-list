@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::match(['get', 'post'], 'product/{productName}', function($productName) {
     return view('product.product');
 });
+
+Route::get('product', 'ProductController@index');
+

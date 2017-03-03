@@ -1,20 +1,9 @@
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 0 auto;
-
-  #content {
-    flex: 1;
-  }
-
-  footer{
-    background-color: #C6C6C6;
-    &#contentinfo {
-      .photo {
-        width: 30px;
-      }
+footer{
+  background-color: #C6C6C6;
+  &#contentinfo {
+    .photo {
+      width: 30px;
     }
-
   }
+
 }

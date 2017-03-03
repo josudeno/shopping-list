@@ -1,0 +1,22 @@
+@import url(../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css);
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0 auto; }
+  body #content {
+    flex: 1; }
+  body .trolley {
+    width: 2em; }
+
+footer {
+  background-color: #C6C6C6; }
+  footer#contentinfo .photo {
+    width: 30px; }
+
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
