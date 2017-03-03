@@ -13,6 +13,11 @@
 
     php artisan migrate
 
+    npm install
+
+## To copy node_modules to public folder
+    npm run dev
+
 ###Interactive database console
     php artisan tinker
     Schema::dropIfExists('products-lists');

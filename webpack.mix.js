@@ -13,3 +13,8 @@ const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+
+mix.copy('node_modules/js-utils/src/Util/Factory', 'public/js/Util/Factory');
+mix.copy('node_modules/js-utils/src/Util/Provider', 'public/js/Util/Provider');
+mix.copy('node_modules/js-utils/src/Util/Namespace.js', 'public/js/Util/Namespace.js');
+mix.copy('node_modules/js-utils/src/Util/TypeHelper.js', 'public/js/Util/TypeHelper.js');

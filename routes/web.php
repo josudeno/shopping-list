@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::match(['get', 'post'], 'product/{productName}', function($productName) {
-    return view('product.product');
-});
+Route::post('product/search', 'ProductController@search');
 
 Route::get('product', 'ProductController@index');
 
